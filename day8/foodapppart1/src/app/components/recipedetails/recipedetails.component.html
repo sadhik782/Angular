@@ -1,0 +1,26 @@
+<br/>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card" *ngIf="selectedRecipe">
+        <img
+          class="card-img-top food-image"
+          [src]="selectedRecipe.image"
+          alt="Recipe image"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ selectedRecipe.name }}</h5>
+          <p class="card-text"><strong>Instructions:</strong> {{ selectedRecipe.instructions }}</p>
+          <p class="card-text"><strong>Ingredients:</strong> {{ selectedRecipe.ingredients?.join(', ') }}</p>
+          <p class="card-text"><strong>Prep Time:</strong> {{ selectedRecipe.prepTimeMinutes }} minutes</p>
+          <p class="card-text"><strong>Cook Time:</strong> {{ selectedRecipe.cookTimeMinutes }} minutes</p>
+          <p class="card-text"><strong>Servings:</strong> {{ selectedRecipe.servings }}</p>
+          <p class="card-text"><strong>Difficulty:</strong> {{ selectedRecipe.difficulty }}</p>
+          <p class="card-text"><strong>Cuisine:</strong> {{ selectedRecipe.cuisine }}</p>
+          <p class="card-text"><strong>Calories per Serving:</strong> {{ selectedRecipe.caloriesPerServing }}</p>
+          <p class="card-text"><strong>Tags:</strong> {{ selectedRecipe.tags?.join(', ') }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
